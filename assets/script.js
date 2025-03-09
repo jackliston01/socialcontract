@@ -1,3 +1,6 @@
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 document.addEventListener('DOMContentLoaded', () => {
     console.log("JavaScript loaded");
 
@@ -45,39 +48,45 @@ function navigateToPage(pageId) {
     }
 }
 
-function calc(){
+async function calc(){
 
     window.history.replaceState(null, "", window.location.pathname);
-
+    const start = performance.now()
     const formula = document.querySelector('input[name="formula"]:checked').value
     const precision = document.getElementById('precision').value
     const interval = document.getElementById('interval').value
     Decimal.set({ precision: 10000 });
 
     if (formula === "leib") {
+        console.log(100%interval==0)
         let sum= new Decimal(0)
         let one = new Decimal(-1)
         let two = new Decimal(2)
 
-        for (let i =0; i<interval; i++){
+        for (let i =0; i<precision; i++){
             let iv = new Decimal(i)
 
             sum = sum.plus(((one.pow(iv)).div((two.times(iv)).minus(one))))
 
     
     
-    
+            if (i%interval==0){
+                await delay(0)
 
+                document.getElementById("pivalue").innerText=(sum.times(4))            }
 
-            if (i%interval == 0){
-            document.getElementById("pivalue").innerText=(sum.times(4))
             }
+            
+
             }
+    const end = performance.now()
+    document.getElementById('time').innerText= `Time: ${(((end-start)/1000)).toFixed(3)} seconds`   
 
 
 
 
-    }}
+
+    }
     
 
 
