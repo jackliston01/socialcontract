@@ -31,15 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function ff(num) {
     if (num == 0) {
-    return (1)
+    return Decimal(1)
     }
     else if (num > 1) {
-      return(num*ff(num-1))
+      return Decimal(num).times(ff(num-1))
     
     
       }
     else{
-      return(num)
+      return Decimal(num)
     
     
     }}
@@ -107,21 +107,25 @@ async function calc(){
         for (let i =0; i<100; i++){
         let iv = new Decimal(i)
 
-        sum = sum.plus( (((ff(iv)).pow(two)).times((two**(iv-one)))).div(ff((two*iv+one))))
-        if (i%10 === 0){
-          console.log(4*sum)
+        sum = sum.plus( (((ff(iv)).pow(two)).times((two.pow(iv.minus(1))))).div(ff((two.times(iv).plus(1)))))
+       
         
+        if (i%interval==0){
+            await delay(0)
+
+            document.getElementById("pivalue").innerText=(sum.times(4))            }
+
         }}
 
-    }
+    
     const end = performance.now()
     document.getElementById('time').innerText= `Time: ${(((end-start)/1000)).toFixed(3)} seconds`   
-
-
-
-
-
     }
+
+
+
+
+    
     
 
 
