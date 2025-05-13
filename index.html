@@ -2,51 +2,47 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pi</title>
+    <title>Social Contract</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="icon" type="image/x-icon" href="/assets/images/j.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/decimal.js/10.4.3/decimal.js"></script>
 
     
 </head>
 <body>
-    <h1> BLANK Digits of Pi</h1>
-    <nav>
-        <span class="nav-link" data-page="home">Home</span>
-        <span class="nav-link" data-page="about">About</span>
-        <span class="nav-link" data-page="contact">Contact</span>
-    </nav>
-    <div id="home" class="page active">
-        <h1>Home Page</h1>
-        <p>Welcome to our website!</p>
-        <form>
-<div class="formulachoice">
+    <h1> Social Contract Quiz</h1>
+    <h3>Jack Liston's AP Euro final project</h2>
+  
+    
+        <p>Take the quiz to find where you lay on the social contract</p>
+      <a href="quiz.html">Begin Quiz</a>
+      <p>Or scroll down for the methodology + more info</p>
+      <br>
+<h3>Social Contract</h3>
 
-    <input type="radio" name="formula" value="leib" > Leibniz Formula <br>
-    <input type="radio" name="formula" value="euler" > euler<br>
+    <img id='examplegraph' src="/assets/images/socialcontractexamplegraph.jpg" alt="example graph" style="float: right; margin: 10px;"></img>        
+<p> The ultimate premise of the social contract is the definition of the relationship between an individual's freedom and state protection of the individual.
+    Many thinkers have attempted to draw a line between the two in an attempt to identify the most "beneficial" balance. 
+    Hobbesian thought believes in the need of an absolutist state to overcome the naturally selfish and violent individual whereas
+    someone like Locke believes in the limitation of the state, empowered by the consent of its people, to support the natural rights of the individual.
+    Importantly, the social contract's primary premise (the relationship between the indidvidual and the state) is heavily dependent on the innate qualities of humans.
+    Logically, the need for a restrictive government will vary vastly depending on the people being governed. 
+    <br>
+    <br>
 
-    <input type="number" id = "precision" name="precision"> Precision <br>
-    <input type="number" id = "n" name="n"> n <br>
-    <input type="number" id="interval" name="interval"> Interval <br>
-    <button type="button" onclick="calc()">GO</button>
-</div>
+    Therefore, I've broken down the social contract into a primary premise and a different, although dependent, seconday belief: 1. The relationship between the individual and the state and 2. Human Nature. See the explanatory graphic on the right.
+</p>
 
+<h3>Methodology</h3>
+After clicking "Begin Quiz," the user is asked many multiple choice questions that, when combined, paint a relatively strong picture of the user's stance on the ideal social contract.
+In an effort to prevent user bias, the questions may seem somewhat abstract or loaded -- this is intentional; simply answer to the best of your ability.
 
-        </form>
-
-        <p id ='pivalue'>pi value</p>
-        <p id ='time'>Time:</p>
-    </div>
-    <div id="about" class="page">
-        <h1>About Page</h1>
-        <p>Learn more about us.</p>
-    </div>
-    <div id="contact" class="page">
-        <h1>Contact Page</h1>
-        <p>Get in touch with us.</p>
-    </div>
+Once all the questions are answered, the website calculates a value for each of axis. These values (out of necessity) are relative. Consequently, in an attempt to contextualize your score, select points of famous thinkers are presented.
+<br>
+<br>
+Enjoy! This website was, in part, inspired by the <a  target="_blank" href= "https://www.politicalcompass.org/" >political compass quiz.</a>
 </body>
 <script src="/assets/script.js"></script>
 </html>
