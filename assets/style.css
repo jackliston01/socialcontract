@@ -2,3 +2,22 @@
     width: 300px;
     height: 300px;
 }
+a, p{
+font-size: 22px;
+
+}
+#socialcontractheader{
+    padding-top: 75px;
+}
+
+#beginquiz{
+     padding: 12px 24px;
+    background-color: #57c935;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
