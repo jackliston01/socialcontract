@@ -112,7 +112,7 @@ a, p {
     padding-top: 75px;
 }
 
-#beginquiz {
+#beginquiz,#backto {
     padding: 12px 24px;
     background-color: #6bac57;
     color: white;
