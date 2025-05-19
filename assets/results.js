@@ -72,4 +72,4 @@ const myChart = new Chart(scchart, {
 });
 
 
-document.getElementById("score").innerHTML=(`Relationship between state and individual (x-axis):${Math.round(authlib*1000)/1000} <br> Human Nature (x-axis):${Math.round(evilgood*1000)/1000} <br> Score are out of 1`)
+document.getElementById("score").innerHTML=(`Relationship between state and individual (x-axis):${Math.round(authlib*1000)/1000} <br> Human Nature (x-axis):${Math.round(evilgood*1000)/1000} <br> Score are out of 1. The more towards the right, the more libertarian. The more towards the top, the more you believe that humans are good and cooperative`)
