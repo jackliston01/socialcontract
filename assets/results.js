@@ -3,7 +3,13 @@ evilgood = 0
 for (let i=1; i<16; i++) {
   let vals = JSON.parse(JSON.parse(localStorage.getItem(i)))
   if (vals.val<3){
-    vals.val = (vals.val)*(-1/2)
+    if (vals.val == 1){
+      vals.val = (vals.val)*(-1)
+
+    }
+    else{
+      vals.val= (vals.val)*(-1/4)
+    }
 
   }
   else{
