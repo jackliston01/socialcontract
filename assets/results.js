@@ -44,7 +44,7 @@ const myChart = new Chart(scchart, {
     }]
   },
   options: {
-    responsive: true,  // Make the chart responsive
+    responsive: false,  // Make the chart responsive
     maintainAspectRatio: true,  // Maintain aspect ratio when resizing
     plugins: {
       legend: { display: false }
