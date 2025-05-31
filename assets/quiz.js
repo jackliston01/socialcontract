@@ -74,7 +74,7 @@ const qbank = {
   },
   "How do you view freedom of speech?": {
     1: "Conspiracy + physically harmful + hate speech/offensive speech shouldn't be allowed",
-    2: "Physically harmful + llegal conspiration shouldn't be allowed (i.e. plotting a murder)",
+    2: "Physically harmful + conspiracy shouldn't be allowed (i.e. plotting a murder)",
     3: "Speech that immediately puts someone in harm shouldn’t be allowed (i.e. yelling fire in a crowded building)",
     4: "All speech should be allowed, no matter what", 
 

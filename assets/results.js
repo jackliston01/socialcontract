@@ -34,9 +34,9 @@ const scchart = document.getElementById('scchart')
 scchart.style.width = '100%';
 scchart.style.maxWidth = '600px';
 scchart.style.height = 'auto';
-scchart.style.aspectRatio = '1/1'; // Maintains a square aspect ratio
+scchart.style.aspectRatio = '1/1';
 
-// Create the chart with responsive option set to true
+
 const myChart = new Chart(scchart, {
   type: 'scatter',
   data: {
@@ -46,12 +46,12 @@ const myChart = new Chart(scchart, {
         { x: authlib, y: evilgood },
       ],
       backgroundColor: 'red',
-      pointRadius: 8  // makes dots larger
+      pointRadius: 8
     }]
   },
   options: {
-    responsive: false,  // Make the chart responsive
-    maintainAspectRatio: true,  // Maintain aspect ratio when resizing
+    responsive: false, 
+    maintainAspectRatio: true,
     plugins: {
       legend: { display: false }
     },
@@ -84,10 +84,10 @@ const myChart = new Chart(scchart, {
   }
 });
 
-// Update the score display
-document.getElementById("score").innerHTML = (`Relationship between state and individual (x-axis):${Math.round(authlib * 1000) / 1000} <br> Human Nature (x-axis):${Math.round(evilgood * 1000) / 1000} <br> Score are out of 1. The more towards the right, the more libertarian. The more towards the top, the more you believe that humans are good and cooperative`);
 
-// Add a resize handler to redraw the chart when window size changes
+document.getElementById("score").innerHTML = (`Relationship between state and individual (x-axis):${Math.round(authlib * 1000) / 1000} <br> Human Nature (y-axis):${Math.round(evilgood * 1000) / 1000} <br> Score are out of 1. The more towards the right, the more libertarian. The more towards the top, the more you believe that humans are good and cooperative`);
+
+
 window.addEventListener('resize', function() {
   myChart.resize();
 });
