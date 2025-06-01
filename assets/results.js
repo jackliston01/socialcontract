@@ -85,69 +85,6 @@ const myChart = new Chart(scchart, {
 });
 
 
-const rchart = document.getElementById('rchart')
-rchart.style.width = '100%';
-rchart.style.maxWidth = '600px';
-rchart.style.height = 'auto';
-rchart.style.aspectRatio = '1/1';
-
-
-const points = [
-  { x: -0.36, y: 0.284, label: 'Authlib' },
-  { x: -0.309, y: -0.417, label: 'Rousseau' },
-  { x: 0.863, y: 0.624, label: 'Locke' },
-  { x: -0.914, y: -0.867, label: 'Hobbes' }
-];
-
-const rchart = new Chart(rchart, {
-  type: 'scatter',
-  data: {
-    datasets: [{
-      label: 'Points',
-      data: points,
-      backgroundColor: 'red',
-      pointRadius: 8
-    }]
-  },
-  options: {
-    responsive: false,
-    maintainAspectRatio: true,
-    plugins: {
-      legend: { display: false },
-      tooltip: {
-        callbacks: {
-          label: ctx => ctx.raw.label
-        }
-      }
-    },
-    scales: {
-      x: {
-        title: {
-          display: true,
-          text: 'State/Individual',
-        },
-        min: -1,
-        max: 1,
-        grid: {
-          color: ctx => ctx.tick.value === 0 ? 'black' : '#ccc',
-          lineWidth: ctx => ctx.tick.value === 0 ? 2 : 1
-        }
-      },
-      y: {
-        title: {
-          display: true,
-          text: 'Human Nature'
-        },
-        min: -1,
-        max: 1,
-        grid: {
-          color: ctx => ctx.tick.value === 0 ? 'black' : '#ccc',
-          lineWidth: ctx => ctx.tick.value === 0 ? 2 : 1
-        }
-      }
-    }
-  }
-});
 
 
 document.getElementById("score").innerHTML = (`Relationship between state and individual (x-axis):${Math.round(authlib * 1000) / 1000} <br> Human Nature (y-axis):${Math.round(evilgood * 1000) / 1000} <br> Score are out of 1. The more towards the right, the more libertarian. The more towards the top, the more you believe that humans are good and cooperative`);
@@ -155,5 +92,4 @@ document.getElementById("score").innerHTML = (`Relationship between state and in
 
 window.addEventListener('resize', function() {
   myChart.resize();
-  rchart.resize()
 });
