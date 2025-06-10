@@ -3,7 +3,7 @@
 
 const qbank = {
   "Should a devout Muslim woman be forced to take off her hijab to take a passport photo (assume that the hijab covers most identifiable features)?": {
-    1: "Yes, of course – she should take it off while going through government security (i.e. TSA)",
+    1: "Yes, of course – she should take it off while going through government security (e.g. TSA)",
     2: "Yes, but the state must be accommodating to her religious beliefs",
     3: "No, not at all, but it is important that her faith is verified",
     4: "No, not at all, no questions asked",
@@ -61,21 +61,21 @@ const qbank = {
   "Should children be forced to go to school?": {
     1: "Yes and they should be punished otherwise (truancy)",
     2: "Yes, but the state should be accommodating if going to school is a financial burden",
-    3: "No, but only if a reason is provided and validated (i.e. child needs to work)",
+    3: "No, but only if a reason is provided and validated (e.g. child needs to work)",
     4: "No, not at all.",
     5: { x: 0.5, y: 0.1 }
   },
   "Should vaccines be mandated? (disregard those with legitimate health exemptions)": {
     1: "Yes, all vaccines should be mandated that have proven to be beneficial",
-    2: "Yes, but only during times of a health crisis (i.e. covid)",
+    2: "Yes, but only during times of a health crisis (e.g. covid)",
     3: "Yes, but there should be exceptions for legitimate religious and personal beliefs",
     4: "No, never and with no strings attached",
     5: { x: 0.6, y: 0.3 }
   },
   "How do you view freedom of speech?": {
     1: "Conspiracy + physically harmful + hate speech/offensive speech shouldn't be allowed",
-    2: "Physically harmful + conspiracy shouldn't be allowed (i.e. plotting a murder)",
-    3: "Speech that immediately puts someone in harm shouldn’t be allowed (i.e. yelling fire in a crowded building)",
+    2: "Physically harmful + conspiracy shouldn't be allowed (e.g. plotting a murder)",
+    3: "Speech that immediately puts someone in harm shouldn’t be allowed (e.g. yelling fire in a crowded building)",
     4: "All speech should be allowed, no matter what", 
 
     5: { x: 0.8, y: 0.2 }
